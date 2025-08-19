@@ -1,21 +1,22 @@
-Please provide the topic to continue. I will then:
+# News Summaries: Cambodia Thailand War.
+**Summary Report Overview** - Total articles processed: 0 - Summary generation date: 2025-08-19
 
-- Use the scrape tool to fetch the full article content from the URLs you provide (or from the previous task’s list if available)
-- Filter for eligible articles (word count, recency, scrape success)
-- Classify each article (e.g., Tech, Politics, Business, International, etc.)
-- Assign credibility and relevance scores
-- Produce the exact Markdown report format you requested:
-  - News Summaries: {topic}
-  - **Summary Report Overview** - Total articles processed: - Summary generation date:
-  ---
-  - ## Article 1: [Original Headline]
-    **Source:** **Date:** **Original URL:**
-    ### 📱 Headline Summary (Tweet-length)
-    ### 📄 Executive Summary
-    ### 📚 Comprehensive Summary
-    **Summary Quality Metrics:** - Recommended audience: - Key topics covered: - Important statistics: - Notable quotes:
-  ---
-  - ## Article 2: [Next Article Headline]
-    [Continue same format for all articles...]
-  
-If you don’t have the topic ready, I can propose a few options or wait for you to specify. Once you provide the topic (and the URLs if you have them), I’ll deliver a complete, ready-to-publish multi-tier summary in the exact format.
+---
+No article URLs were provided, and the collection shows 0 articles available. To generate the requested Headline, Executive, and Comprehensive summaries, please provide the URLs of the articles you want summarized. I will scrape each page, extract full content and metadata, and produce multi-tier summaries per your format.
+
+How to proceed:
+- Reply with a list of article URLs (one per line), or upload the file used in the previous task.
+- If relevant, specify any priority ordering, key angles to emphasize, or audience focus.
+
+Example expected input:
+- https://www.reuters.com/...
+- https://www.aljazeera.com/...
+- https://www.bbc.com/news/...
+
+Once URLs are provided, you will receive for each article:
+- Headline Summary (≤280 characters)
+- Executive Summary (150–200 words)
+- Comprehensive Summary (500–700 words)
+- Summary Quality Metrics (audience, topics, stats, notable quotes)
+
+---

@@ -7,32 +7,30 @@ content_harvesting_task:
     2. From the search results, identify URLs from credible sources.
 
     3. **IMPORTANT: Only select actual article pages, not topic hubs or tag listings**
-    You must filter out any URLs that are likely to be:
-    - Topic/tag/section index pages (e.g., URLs containing "/tag/", "/topic/", "/hub/", "/section/
-    ", "/category/")
-    - Pages with no unique headline or timestamp
-    - Pages that only contain a list of other stories or links
-    ✅ Acceptable article URLs:
-    - Should contain a full article with body text
-    - Should have a clear headline and publication date
-    - Often include slugs like `/2023/10/.../story-title` or unique story IDs
-    ❌ Reject the following types of URLs:
-    - https://www.nytimes.com/topic/
-    - https://apnews.com/hub
-    - https://aljazeera.com/tag
-    These are topic collections, not individual articles.
+      You must filter out any URLs that are likely to be:
+      - Topic/tag/section index pages (e.g., URLs containing "/tag/", "/topic/", "/hub/", "/section/", "/category/")
+      - Pages with no unique headline or timestamp
+      - Pages that only contain a list of other stories or links
+      ✅ Acceptable article URLs:
+      - Should contain a full article with body text
+      - Should have a clear headline and publication date
+      - Often include slugs like `/2023/10/.../story-title` or unique story IDs
+      ❌ Reject the following types of URLs:
+      - https://www.nytimes.com/topic/ 
+      - https://apnews.com/hub
+      - https://aljazeera.com/tag
+      These are topic collections, not individual articles.
 
     4. For each **accepted** article URL:
-    - Use the scrape tool to extract the full article content from the URL
-    - Extract metadata: title, source, publication date and complete article text.
+      - Use the scrape tool to extract the full article content from the URL
+      - Extract metadata: title, source, publication date and complete article text.
 
     5. Apply intelligent filtering to remove:
-    - Articles shorter than 200 words
-    - Articles older than 48 hours (unless specifically relevant)
-    - Pages that failed to scrape or contain no substantial content
+      - Articles shorter than 200 words
+      - Articles older than 48 hours (unless specifically relevant)
+      - Pages that failed to scrape or contain no substantial content
 
-    6. Classify each article into appropriate topic categories (Tech, Politics, Business, Science,
-    Health, Sports, International, etc.)
+    6. Classify each article into appropriate topic categories (Tech, Politics, Business, Science, Health, Sports, International, etc.)
 
     7. Assign credibility scores (1-10) based on source reputation and content quality
 
@@ -62,6 +60,7 @@ content_harvesting_task:
     **Credibility Score:**
     **Relevance Score:**
 
+
     ---
     [Use this format for all articles...]
   agent: news_hunter_agent
@@ -76,20 +75,21 @@ summarization_task:
     Use the scrape tool to extract the full article content from the URL.
 
     For each article found in the file, create:
-    1. **Headline Summary** ( - Capture the absolute essence in social media format
-    - Focus on the most newsworthy element
-    - Include key numbers or impact metrics when relevant
+    1. **Headline Summary** (≤280 characters, tweet-style)
+       - Capture the absolute essence in social media format
+       - Focus on the most newsworthy element
+       - Include key numbers or impact metrics when relevant
 
-    2. **Executive Summary** (150-200 words, concise briefing)
-    - Perfect for busy professionals and news skimmers
-    - Include the main development and immediate implications
-    - Mention key players and basic context
+    2. **Executive Summary** (150–200 words, concise briefing)
+       - Perfect for busy professionals and news skimmers
+       - Include the main development and immediate implications
+       - Mention key players and basic context
 
     3. **Comprehensive Summary** (500-700 words with full context)
-    - Provide full context and background information
-    - Include multiple perspectives and expert opinions
-    - Explain technical concepts for general audience
-    - Cover implications and future outlook
+       - Provide full context and background information
+       - Include multiple perspectives and expert opinions
+       - Explain technical concepts for general audience
+       - Cover implications and future outlook
 
     Maintain journalistic tone, objectivity, and readability throughout all summary levels.
     Use metadata from the original articles to guide emphasis and level of detail.
@@ -114,10 +114,10 @@ summarization_task:
     ### 📱 Headline Summary (Tweet-length)
     [280-character summary here...]
 
-    ### 📄 Executive Summary
+    ### 📋 Executive Summary
     [150-200 word professional briefing here...]
 
-    ### 📚 Comprehensive Summary
+    ### 📖 Comprehensive Summary
     [300-500 word detailed summary with full context here...]
 
     **Summary Quality Metrics:**
@@ -128,7 +128,7 @@ summarization_task:
 
     ---
 
-    ## Article 2: [Next Article Headline]
+    ## Article 2: [Next Article Headline] 
 
     [Continue same format for all articles...]
   agent: summarizer_agent
@@ -138,7 +138,7 @@ summarization_task:
 
 final_report_assembly_task:
   description: >
-    Create the final, publication-ready markdown news briefing by combining all
+    Create the final, publication-ready markdown news briefing by combining all 
     previous work into a professional, cohesive report suitable for daily publication.
 
     Assembly process:
@@ -157,13 +157,13 @@ final_report_assembly_task:
 
     # Daily News Briefing: {topic}
 
-    **Date:**
-    **Generated:**
-    **Stories Covered:**
+    **Date:** 
+    **Generated:** 
+    **Stories Covered:** 
 
     ## Executive Summary
 
-    [Compelling opening paragraph that captures the day's most important developments
+    [Compelling opening paragraph that captures the day's most important developments 
     and sets context for the full briefing]
 
     ---
@@ -186,7 +186,7 @@ final_report_assembly_task:
     [Executive or comprehensive summary based on editorial plan]
     **Source:** [Publication] | **Read more:** [Link](url)
 
-    ### [Story Headline]
+    ### [Story Headline]  
     [Executive or comprehensive summary based on editorial plan]
     **Source:** [Publication] | **Read more:** [Link](url)
 
@@ -201,6 +201,8 @@ final_report_assembly_task:
     **Source:** [Publication] | **Read more:** [Link](url)
 
     [Continue with all sections as defined in editorial plan...]
+
+    ---
 
     ## 🎯 Editor's Analysis
 
